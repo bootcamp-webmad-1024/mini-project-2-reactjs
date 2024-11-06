@@ -1,4 +1,5 @@
 import './App.css'
+import ApartmentsList from './components/ApartmentsList/ApartmentsList.jsx'
 
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar.jsx'
@@ -17,7 +18,7 @@ function App() {
 
         <Sidebar />
 
-        {/* PANEL DERECHO AQUÍ */}
+        <ApartmentsList />
 
       </div>
 
