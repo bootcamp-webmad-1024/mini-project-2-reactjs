@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './ApartmentCard.css'
 
 const ApartmentCard = ({ id, city, name, bathrooms, price, review_scores_rating, removeApartment, room_type, property_type }) => {
@@ -11,7 +12,9 @@ const ApartmentCard = ({ id, city, name, bathrooms, price, review_scores_rating,
         <article className="ApartmentCard" style={customCardStyle}>
             <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/9516e180691313.5ce82f4b6d95f.jpg" alt="Apartment" />
             <div className="details">
-                <h3>{name}</h3>
+                <Link to={`/detalles/${id}`}>
+                    <h3>{name}</h3>
+                </Link>
                 <p>{
                     room_type === "Entire home/apt" ? room_type : `${room_type} in ${property_type}`
                 }</p>
